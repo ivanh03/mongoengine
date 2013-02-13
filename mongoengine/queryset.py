@@ -93,7 +93,7 @@ class SimplificationVisitor(QNodeVisitor):
             intersection = ops.intersection(query_ops)
             if intersection:
                 msg = 'Duplicate query conditions: '
-                raise InvalidQueryError(msg + ', '.join(intersection))
+                # raise InvalidQueryError(msg + ', '.join(intersection))
 
             query_ops.update(ops)
             combined_query.update(copy.deepcopy(query))
